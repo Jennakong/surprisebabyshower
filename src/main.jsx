@@ -36,25 +36,25 @@ function App() {
   return (
     <main className="page-shell">
       <div className="grain" aria-hidden="true" />
-      <nav className="topbar"><span className="tiny-flower">✳</span><span>A LITTLE FAMILY SURPRISE</span><span className="tiny-flower">✳</span></nav>
+      <nav className="topbar"><span>A LITTLE FAMILY SURPRISE</span></nav>
 
       {screen === 'intro' && <section className="hero screen-in" aria-live="polite">
         <div className="eyebrow"><Sparkles size={15} /> YOU'RE ON THE LIST <Sparkles size={15} /></div>
         <div className="sticker sticker-left" aria-hidden="true">shhh! 🤫</div>
-        <div className="sticker sticker-right" aria-hidden="true">little human<br/>loading…</div>
+        <div className="sticker sticker-right" aria-hidden="true">little secret<br/>mission…</div>
         <p className="pretitle">Okay, quick question…</p>
         <h1>Are you free<br/><em>on Saturday?</em></h1>
         <p className="intro-copy">Because we have a tiny little secret, and we'd really love you to be part of it.</p>
         <div className="question-card">
           <span className="card-number">01 / THE VERY IMPORTANT QUESTION</span>
           <div className="button-row">
-            <button className="btn btn-primary" onClick={celebrate}>I'm free! <span>✳</span></button>
+            <button className="btn btn-primary" onClick={celebrate}>I'm free! </button>
             <button className={`btn btn-secondary ${noCount > 0 ? 'wiggle' : ''}`} onClick={sayNo}>Can't make it <X size={17}/></button>
           </div>
           <p className="microcopy">Be honest… but choose wisely 👀</p>
         </div>
     
-        <div className="floating-heart heart-one">♡</div><div className="floating-heart heart-two">✳</div>
+        <div className="floating-heart heart-one">♡</div><div className="floating-heart heart-two">♡</div>
       </section>}
 
       {screen === 'nope' && <section className="response screen-in">
@@ -71,7 +71,7 @@ function App() {
 
       {screen === 'reveal' && <section className="reveal screen-in" aria-live="polite">
         <div className="eyebrow"><Sparkles size={15}/> YOU PASSED THE VIBE CHECK <Sparkles size={15}/></div>
-        <div className="reveal-art"><span className="sunburst">✳</span><span className="baby-icon">🧸</span><span className="little-star star-a">✦</span><span className="little-star star-b">✧</span></div>
+        <div className="reveal-art"><span className="sunburst">♡</span><span className="baby-icon">🧸</span><span className="little-star star-a">✦</span><span className="little-star star-b">✧</span></div>
       
         <h1>It's a baby<br/><em>shower!</em></h1>
         <div className="secret-pill"><span className="live-dot"/> THIS IS A SURPRISE. KEEP IT QUIET 🤫</div>
@@ -87,13 +87,13 @@ function App() {
           <article className="detail-card"><div className="detail-icon"><CalendarDays size={21}/></div><span className="detail-label">SAVE THE DATE</span><strong>{EVENT.date}</strong><span>{EVENT.time}</span></article>
           <article className="detail-card"><div className="detail-icon"><MapPin size={21}/></div><span className="detail-label">WHERE TO GO</span><strong>{EVENT.location}</strong><span>We can't wait to see you there!</span></article>
         </div>
-        <div className="love-note"><span className="note-spark">✳</span><p>Being invited means you're someone we hold in very high esteem. This will be an intimate gathering, full of love, laughter, and a little celebrating. Thank you for being part of their village. 🤍</p></div>
+        <div className="love-note"><span className="note-spark">♡</span><p>Being invited means you're someone we hold in very high esteem. This will be an intimate gathering, full of love, laughter, and a little celebrating. Thank you for being part of their village. 🤍</p></div>
         <div className="rsvp-block"><p className="card-number">02 / NOW, THE RSVP</p><h2>Can we count you in?</h2><p className="rsvp-copy">Tap your answer and WhatsApp will open with a message ready for you to send.</p>
           <button className="btn btn-primary full" onClick={() => whatsapp(true)}>I'll be there! <MessageCircle size={18}/></button>
           <button className="btn btn-secondary full" onClick={() => whatsapp(false)}>I can't make it <MessageCircle size={18}/></button>
           <p className="microcopy">Please remember to press send in WhatsApp so we receive your RSVP.</p>
         </div>
-        <div className="closing">With love, <span>the family</span> <div className="closing-doodle">♡ ✳ ♡</div></div>
+        <div className="closing">With love, <span>the family</span> <div className="closing-doodle">♡</div></div>
       </section>}
 
       <footer className="footer"><span>BABY SHOWER</span></footer>
